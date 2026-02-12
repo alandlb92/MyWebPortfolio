@@ -1,0 +1,58 @@
+{
+    "Projects": [
+        {
+            "title": "Avalon 1",
+            "description": "MMO sandbox UE5",
+            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
+            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+        },
+        {
+            "title": "Avalon 2",
+            "description": "MMO sandbox UE5",
+            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
+            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+        },
+        {
+            "title": "Avalon 3",
+            "description": "MMO sandbox UE5",
+            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
+            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+        },
+        {
+            "title": "Avalon 4",
+            "description": "MMO sandbox UE5",
+            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
+            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+        },
+        {
+            "title": "Avalon 5",
+            "description": "MMO sandbox UE5",
+            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
+            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+        },
+        {
+            "title": "Avalon 6",
+            "description": "MMO sandbox UE5",
+            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
+            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+        },
+        {
+            "title": "Avalon 7",
+            "description": "MMO sandbox UE5",
+            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
+            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+        },
+        {
+            "title": "Avalon 8",
+            "description": "MMO sandbox UE5",
+            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
+            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+        },
+        {
+            "title": "Avalon 9",
+            "description": "MMO sandbox UE5",
+            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
+            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+        }
+    ]
+}
