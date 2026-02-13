@@ -1,16 +1,22 @@
-function OnStartMainPage() {
+var ProjectHtml;
+
+
+async function OnStartMainPage() {
     console.log("Main page loaded");
+    const module = await import("./MainContent.js");
+    module.OnStart();
+    
+    const ProjectHtmlResponse = await fetch("Pages/Modules/ProjectDetails.html");
+    ProjectHtml = await ProjectHtmlResponse.text();
 }
 
 
 document.addEventListener("DOMContentLoaded", async function () {
     try {
-        const response = await fetch("Pages/MainContent.html");
+        const response = await fetch("Pages/Modules/MainContent.html");
         const html = await response.text();
-        document.getElementById("content").innerHTML = html;
-
-        const module = await import("./MainContent.js");
-        module.OnStart(); // se exportar isso
+        content.innerHTML = html;
+        OnStartMainPage();
     } catch (error) {
         console.error("Erro ao carregar HTML:", error);
     }
