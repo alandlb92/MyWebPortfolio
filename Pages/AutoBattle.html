@@ -1,0 +1,87 @@
+<h2>AutoBattle – Turn-Based Combat Simulator (C++)</h2>
+
+<p>
+    AutoBattle is a console-based turn-based combat game and engine developed in
+    modern C++, built as a study and challenge to engineer clean gameplay
+    architecture, pattern application, and modular combat systems.
+</p>
+
+<h3>Project Overview</h3>
+<p>
+    The core gameplay loop begins by configuring the battlefield dimensions,
+    selecting a player class (e.g., Paladin, Warrior, Cleric, Archer), and
+    procedurally selecting an enemy. The game then enters a turn loop where
+    each character executes actions until one side is defeated.
+</p>
+
+<h3>Command Pattern Architecture</h3>
+<p>
+    A major focus of this study was the integration of the <strong>Command Pattern</strong>
+    to encapsulate character actions (Move, Regular Attack, Special Attack) as
+    independent command objects. This pattern decouples gameplay logic from
+    character data and allows easy extension, reordering, and sequencing of actions.
+</p>
+
+<p>
+    Commands such as <em>SimpleAttackCommand</em>, <em>FireBallCommand</em>,
+    and <em>WrathOfWarriorCommand</em> inherit from a unified interface and
+    are selected dynamically by the character’s turn system based on game state
+    and configured rules.
+</p>
+
+<h3>Gameplay Components</h3>
+<ul>
+    <li><strong>GameManager</strong> – orchestrates initialization, dependency injection, and high-level flow</li>
+    <li><strong>TurnSystem</strong> – manages turn order, resolves action execution, and updates state</li>
+    <li><strong>InputHandle</strong> – processes console input and maps to in-game decisions</li>
+    <li><strong>BattleField</strong> – represents the spatial grid and manages unit placement</li>
+    <li><strong>Character</strong> and <strong>CharacterClass</strong> – define attributes and behavior bindings</li>
+    <li><strong>Helpers</strong> – utility functions to abstract common operations</li>
+</ul>
+
+<h3>Technical Highlights</h3>
+<p>
+    During development and refactoring, the following were achieved:
+</p>
+
+<ul>
+    <li>Command Pattern integration to encapsulate discrete character actions</li>
+    <li>Clean turn resolution via a dedicated TurnSystem</li>
+    <li>Decoupled input handling and game logic</li>
+    <li>Class hierarchy restructuring and separation of concerns</li>
+    <li>Clear grid and battlefield management logic</li>
+    <li>Modular action binding via data-driven configuration</li>
+</ul>
+
+<h3>Game Flow Logic</h3>
+<p>
+    Each turn, the system:
+</p>
+<ol>
+    <li>Evaluates available actions based on character stats</li>
+    <li>Selects and queues the appropriate Command</li>
+    <li>Executes the Command via the TurnSystem</li>
+    <li>Updates state and resolves the next active entity</li>
+</ol>
+
+<h3>Design Considerations</h3>
+<p>
+    The codebase was refactored to improve separation of concerns and reduce coupling.
+    By moving logic out of monolithic structures and into dedicated Command classes,
+    the system supports:
+</p>
+<ul>
+    <li>Action polymorphism and extensibility</li>
+    <li>Easy addition of new skills or behaviors</li>
+    <li>Isolated unit testing of game rules</li>
+    <li>Clear responsibility boundaries across subsystems</li>
+</ul>
+
+<h3>Conclusion</h3>
+<p>
+    AutoBattle served as a valuable experiment in applying software engineering
+    patterns to gameplay systems. By implementing the Command Pattern and
+    reorganizing the architecture, I improved maintainability, modularity,
+    and scalability of the game logic while gaining deeper insights
+    into clean design in a C++ context.
+</p>

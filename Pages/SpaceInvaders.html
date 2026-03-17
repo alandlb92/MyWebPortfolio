@@ -1,0 +1,128 @@
+<h2>Project Overview</h2>
+<p>
+    This project is a simplified Space Invaders clone built entirely in C++ using SFML.
+    The main objective was not to recreate the game itself, but to manually implement
+    the core systems behind a real-time interactive application, including game loop,
+    time management, collision detection, and low-level rendering logic.
+</p>
+
+<h2>Core Architecture</h2>
+<p>
+    The application follows a traditional real-time loop structure, explicitly
+    separating input processing, simulation updates, and rendering stages.
+</p>
+
+<pre>
+while (window.isOpen())
+{
+    processInput();
+    update(deltaTime);
+    render();
+}
+</pre>
+
+<p>
+    Delta time was calculated every frame using high resolution clock measurements.
+    All state mutations occur strictly inside the update phase, ensuring a clean
+    separation between simulation and presentation.
+</p>
+
+<h2>Time Management & Frame Independence</h2>
+<p>
+    Entity movement and projectile trajectories were implemented using
+    time-scaled vector arithmetic:
+</p>
+
+<pre>
+position += velocity * deltaTime;
+</pre>
+
+<p>
+    This guarantees frame-rate independent motion and consistent gameplay
+    behavior across different hardware configurations.
+</p>
+
+<h2>Manual Physics & Collision System</h2>
+<p>
+    No physics middleware was used. All movement and collision detection
+    were implemented manually using custom logic.
+</p>
+
+<ul>
+    <li>Projectile motion via vector integration</li>
+    <li>Enemy group translation logic</li>
+    <li>Boundary clamping against screen limits</li>
+    <li>Axis-Aligned Bounding Box (AABB) collision detection</li>
+</ul>
+
+<p>
+    The AABB system was implemented through custom Bounds structures,
+    performing overlap checks using rectangle intersection logic.
+    Collision tests were executed only for active entities to reduce
+    unnecessary comparisons.
+</p>
+
+<h2>Data-Oriented Sprite Representation</h2>
+<p>
+    Instead of using external textures or sprite sheets, all visual assets
+    were defined programmatically as fixed-size binary matrices (14x14),
+    functioning as occupancy masks.
+</p>
+
+<p>
+    Each sprite frame is represented as a 2D binary grid where each cell
+    contains a 0 or 1 value, defining whether a pixel should be rendered.
+    This effectively simulates a CPU-driven rasterization approach.
+</p>
+
+<pre>
+const int Enemy2[2][196] = {
+    { ... },
+    { ... }
+};
+</pre>
+
+<p>
+    During rendering, the matrix is iterated manually and visible pixels
+    are drawn as scaled quads. This avoids traditional texture loading
+    and exposes low-level control over sprite construction.
+</p>
+
+<h2>Rendering Pipeline</h2>
+<p>
+    Rendering was performed explicitly during the draw phase without
+    engine-level abstractions. Entities were drawn in a deterministic
+    order to preserve correct visual layering.
+</p>
+
+<p>
+    The system operates as a CPU-driven render pipeline using SFML as
+    a thin abstraction over the graphics API.
+</p>
+
+<h2>Memory & Object Management</h2>
+<p>
+    Entities such as Player, EnemyBlock, Barrier, and Bullet were managed
+    manually. The project predates modern architectural patterns, so it
+    intentionally reflects a straightforward object-oriented structure
+    focused on clarity and experimentation rather than scalability.
+</p>
+
+<h2>Technical Learnings</h2>
+<ul>
+    <li>Low-level game loop design</li>
+    <li>Frame-rate independent simulation</li>
+    <li>Manual AABB collision detection</li>
+    <li>Binary sprite mask representation</li>
+    <li>CPU-driven raster logic</li>
+    <li>Explicit simulation/render separation</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+    This project served as a foundational technical study in real-time
+    application architecture. By manually implementing systems that are
+    typically abstracted by modern engines, I developed a deeper
+    understanding of rendering pipelines, simulation loops,
+    collision systems, and low-level data representation.
+</p>

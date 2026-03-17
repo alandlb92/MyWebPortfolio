@@ -4,10 +4,7 @@ var ProjectHtml;
 async function OnStartMainPage() {
     console.log("Main page loaded");
     const module = await import("./MainContent.js");
-    module.OnStart();
-    
-    const ProjectHtmlResponse = await fetch("Pages/Modules/ProjectDetails.html");
-    ProjectHtml = await ProjectHtmlResponse.text();
+    module.OnStart();    
 }
 
 

@@ -1,0 +1,66 @@
+<h2>Online Pool Game (8 Ball Inspired)</h2>
+
+<p>
+    This project is a multiplayer pool game built entirely from scratch,
+    inspired by Miniclip’s 8 Ball Pool. I was responsible for the full
+    gameplay, physics, and networking implementation.
+</p>
+
+<h3>Custom Physics System</h3>
+<p>
+    After initially testing Unity’s built-in physics system, I realized it
+    did not provide the level of precision and consistency required for a
+    competitive pool experience. Following research and experimentation,
+    I decided to implement a custom 2D physics solution tailored specifically
+    for billiards gameplay.
+</p>
+
+<p>
+    The physics system simulates core principles such as:
+</p>
+
+<ul>
+    <li>Elastic collisions between balls</li>
+    <li>Inertia and velocity preservation</li>
+    <li>Friction and gradual deceleration</li>
+    <li>Accurate ball-to-ball and ball-to-wall interactions</li>
+</ul>
+
+<p>
+    The result was a deterministic and consistent simulation closely
+    resembling the feel of 8 Ball Pool.
+</p>
+
+<h3>Deterministic Multiplayer Architecture</h3>
+
+<p>
+    Instead of replicating object transforms over the network, the game
+    uses a deterministic simulation model.
+</p>
+
+<ul>
+    <li>When a player takes a shot, only the applied force data is sent to the server via RPC.</li>
+    <li>The server validates and forwards this input to the other client.</li>
+    <li>Each client runs the exact same physics simulation locally.</li>
+    <li>No continuous transform replication is used.</li>
+</ul>
+
+<p>
+    Once the physics simulation ends, all clients notify the server.
+    The server then validates final ball positions to ensure consistency
+    and prevent potential manipulation or cheating.
+</p>
+
+<p>
+    Because the physics simulation is deterministic and executed identically
+    on all clients and the server, the results remain highly consistent
+    while minimizing network bandwidth usage.
+</p>
+
+<h3>Additional Systems</h3>
+
+<ul>
+    <li>Turn-based multiplayer synchronization</li>
+    <li>UI integration and gameplay feedback systems</li>
+    <li>Server-side validation for security and fairness</li>
+</ul>

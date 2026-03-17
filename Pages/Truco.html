@@ -1,0 +1,42 @@
+<h3>Animations</h3>
+<p>
+    The animations in this project were implemented using animation curves
+    and coroutines, allowing precise timing control and flexible manipulation.
+    This approach also enabled controlled randomization of final positions,
+    creating more dynamic and natural card and UI movements.
+</p>
+
+<h3>Turn-Based System & Multiplayer Synchronization</h3>
+<p>
+    I implemented the complete turn-based system for the Truco game,
+    including turn flow management and interactive buttons for
+    Truco requests.
+</p>
+
+<ul>
+    <li>Turn flow and game state management</li>
+    <li>Implementation of Truco request logic</li>
+    <li>Client synchronization during Truco calls</li>
+</ul>
+
+<p>
+    Special care was taken to ensure proper synchronization between clients,
+    maintaining a consistent game state and preventing desynchronization issues.
+</p>
+
+<h3>Networking & Security</h3>
+<p>
+    The game was built using a server-authoritative architecture to ensure fairness and security.
+</p>
+
+<ul>
+    <li>Card data exists exclusively on the server.</li>
+    <li>Clients do not have access to opponents' card information.</li>
+    <li>If an opponent leaves the scene, the hidden side of their cards remains empty.</li>
+    <li>Cards are revealed only through server-side RPC calls.</li>
+</ul>
+
+<p>
+    This architecture prevents client-side data inspection and ensures secure,
+    fair multiplayer gameplay.
+</p>

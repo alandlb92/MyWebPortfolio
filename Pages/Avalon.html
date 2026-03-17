@@ -1,0 +1,39 @@
+<h3>Building System</h3>
+<p>
+In the building system, I implemented the rotation of the 3D volume selection.
+</p>
+<p>
+Although it may sound simple, the selection volume was not just a basic box with a shader applied. It is dynamically generated at runtime to support advanced gameplay features.
+</p>
+<p>
+To enable proper rotation, I implemented the solution using matrix rotation mathematics, applying custom transformation logic to ensure correct orientation and behavior within the system.
+</p>
+<p>
+This required a solid understanding of 3D math and transformation matrices.
+</p>
+
+<h3>Combat Behavior</h3>
+<p>
+Within the combat behavior system, I implemented a strategic ranged attack feature for certain melee NPCs.
+</p>
+<p>
+This behavior triggers when:
+</p>
+<p>
+- The NPC has a high-ground advantage, or<br>
+- The straight-line distance to the player is shorter than the calculated pathfinding distance.
+</p>
+<p>
+This allowed melee enemies to behave more intelligently and strategically depending on terrain and navigation constraints, improving combat dynamics and realism.
+</p>
+
+<h3>Bug Fixes &amp; System Improvements</h3>
+<p>
+I worked on bug fixes across multiple areas of the game, including gameplay systems, animation, and AI.
+</p>
+<p>
+In the animation system, I fixed logic issues between the Animation Instance and the Behavior Tree that were causing NPCs to slide under certain conditions.
+</p>
+<p>
+I also corrected blending issues between movement and attack animations, ensuring proper transitions and preventing incorrect animation calls.
+</p>

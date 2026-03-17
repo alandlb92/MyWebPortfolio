@@ -1,0 +1,62 @@
+<h2>GAS Implementation</h2>
+
+<p>
+    Uniqkiller originally used a custom ability and skill system that presented
+    several architectural and replication issues, particularly when expanding
+    the game with new abilities. Although a modular weapon system was already
+    working well, the ability framework required a more scalable and
+    network-reliable solution.
+</p>
+
+<p>
+    To address this, I led the migration to Unreal Engine’s
+    <strong>Gameplay Ability System (GAS)</strong>. Instead of rewriting
+    everything at once, I adopted a smooth, incremental implementation
+    approach, gradually replacing parts of the old system to minimize disruption.
+</p>
+
+<p>
+    I began by designing and implementing custom <strong>AttributeSets</strong>,
+    establishing the foundation for the new attribute-driven architecture.
+    After that, I integrated the system with the UI through proper bindings and
+    implemented gameplay effects such as damage-over-time areas and healing zones.
+    I also refactored the existing damage pipeline, adapting the
+    <em>TakeDamage</em> logic to work with the new attribute-based system.
+</p>
+
+<h3>Implemented Abilities</h3>
+<ul>
+    <li>
+        <strong>Wall Shield</strong> – Allows the player to summon a defensive
+        shield in front of them.
+    </li>
+    <li>
+        <strong>Search for Prey</strong> – Reveals enemy indicators on screen
+        and applies a silhouette shader visible through walls.
+    </li>
+    <li>
+        Additional gameplay-driven skills built using GAS best practices.
+    </li>
+</ul>
+
+<h2>Skill Tree & Progression System</h2>
+
+<p>
+    I designed and developed the complete <strong>Skill Tree UI system</strong>,
+    enabling players to unlock progression-based modifiers that directly modify
+    values inside Unreal <strong>AttributeSets</strong>.
+</p>
+
+<p>
+    These modifiers were fully integrated with GAS through Gameplay Effects,
+    dynamically applying attribute changes in a scalable and network-safe way,
+    allowing players to customize and specialize their characters.
+</p>
+
+<h2>Additional Contributions</h2>
+
+<p>
+    Beyond system architecture and UI implementation, I contributed to various
+    gameplay improvements, bug fixes, and performance optimizations across
+    the project.
+</p>

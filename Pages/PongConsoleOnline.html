@@ -1,0 +1,138 @@
+<h2>Project Overview</h2>
+<p>
+    This project is a real-time multiplayer Pong game rendered entirely in the console.
+    All networking logic was implemented using C++ and Boost libraries, without
+    any external engine or gameplay framework.
+</p>
+
+<p>
+    The focus was not graphics, but networking architecture, message handling,
+    and synchronization between clients and server.
+</p>
+
+<hr>
+
+<h2>Architecture</h2>
+<p>
+    The application follows a client-server model:
+</p>
+
+<ul>
+    <li>Server: authoritative game state management</li>
+    <li>Clients: input capture and state rendering</li>
+</ul>
+
+<p>
+    The server is responsible for:
+</p>
+
+<ul>
+    <li>Receiving player input (arrow keys)</li>
+    <li>Updating paddle positions</li>
+    <li>Simulating ball movement</li>
+    <li>Broadcasting updated game state</li>
+</ul>
+
+<p>
+    Clients only send input commands and render the state received from the server.
+    No game logic is executed client-side, ensuring authoritative state control.
+</p>
+
+<hr>
+
+<h2>WebSocket Communication</h2>
+<p>
+    Communication was implemented using Boost (Boost.Asio / Boost.Beast).
+    The system handles:
+</p>
+
+<ul>
+    <li>Connection management</li>
+    <li>Handshake handling</li>
+    <li>Asynchronous message sending</li>
+    <li>Asynchronous message reception</li>
+    <li>Manual serialization of game state</li>
+</ul>
+
+<p>
+    Messages are lightweight and structured to transmit:
+</p>
+
+<ul>
+    <li>Player input events (UP/DOWN)</li>
+    <li>Ball position</li>
+    <li>Paddle positions</li>
+</ul>
+
+<p>
+    The project required explicit management of:
+</p>
+
+<ul>
+    <li>Message buffering</li>
+    <li>Thread safety</li>
+    <li>Connection lifecycle</li>
+    <li>Latency considerations</li>
+</ul>
+
+<hr>
+
+<h2>Console Rendering</h2>
+<p>
+    The game is rendered directly in the console using text-based output.
+    Each frame redraws the board using ASCII characters.
+</p>
+
+<p>
+    Rendering logic maps game state coordinates to console positions,
+    allowing visual representation of:
+</p>
+
+<ul>
+    <li>Ball movement</li>
+    <li>Paddle positions</li>
+    <li>Score updates</li>
+</ul>
+
+<p>
+    This simplified rendering approach allowed full focus on networking logic
+    without graphical complexity.
+</p>
+
+<hr>
+
+<h2>Input Handling</h2>
+<p>
+    Client-side input captures arrow key presses and translates them
+    into structured network messages sent to the server.
+</p>
+
+<p>
+    The server interprets these messages and updates paddle positions accordingly.
+</p>
+
+<hr>
+
+<h2>Technical Highlights</h2>
+<ul>
+    <li>Low-level WebSocket implementation in C++</li>
+    <li>Asynchronous networking with Boost</li>
+    <li>Authoritative server architecture</li>
+    <li>Manual state synchronization</li>
+    <li>Console-based real-time rendering</li>
+    <li>No engine or external game framework</li>
+</ul>
+
+<hr>
+
+<h2>Conclusion</h2>
+<p>
+    This study provided hands-on experience with real-time network programming,
+    asynchronous communication patterns, and authoritative multiplayer architecture.
+</p>
+
+<p>
+    By removing graphical complexity and focusing purely on networking,
+    the project allowed a deep understanding of message flow, synchronization,
+    and server-client responsibilities in multiplayer systems.
+</p>

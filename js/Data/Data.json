@@ -1,58 +1,303 @@
 {
     "Projects": [
         {
-            "title": "Avalon 1",
-            "description": "MMO sandbox UE5",
+            "category": "Projects",
+            "title": "Avalon",
+            "projectLink": "https://www.avalon.online/",
+            "description": "AVALON is a new kind of game, a boundless realm where players empowered by AI can forge their own worlds.",
+            "Roles": [
+                "Gameplay Programmer"
+            ],
+            "about": "At Avalon, I worked as a generalist, contributing to multiple areas of the project and supporting the team wherever needed. My work ranged from gameplay systems to AI behavior and bug fixing across different game systems.",
             "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
-            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+            "skills": [
+                "C++",
+                "Unreal Engine",
+                "Multiplayer",
+                "PC",
+                "Plastic SCM"
+            ],
+            "htmlpath": "Pages/Avalon.html"
         },
         {
-            "title": "Avalon 2",
-            "description": "MMO sandbox UE5",
-            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
-            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+            "category": "Projects",
+            "title": "Uniqkiller",
+            "projectLink": "https://www.uniqkiller.com/",
+            "description": "Uniqkiller is a free-to-play multiplayer top-down shooter where you customize unique heroes and battle in fast-paced urban PvP combat.",
+            "Roles": [
+                "Gameplay Programmer"
+            ],
+            "about": "At Uniqkiller, I led the implementation of Unreal’s Gameplay Ability System (GAS), designing and building a custom skill architecture with a progression-based skill tree. I also developed the complete skill tree UI, integrating unlock logic and progression flow. Beyond that, I contributed to multiple gameplay systems and supported the team with bug fixing and performance optimizations.",
+            "image": "src/ProjectFiles/Uniqkiller/UniqkillerCover.webp",
+            "skills": [
+                "C++",
+                "Unreal Engine",
+                "Multiplayer",
+                "git",
+                "svn",
+                "PC",
+                "Android",
+                "IOS"
+            ],
+            "htmlpath": "Pages/Uniqkiller.html"
         },
         {
-            "title": "Avalon 3",
-            "description": "MMO sandbox UE5",
-            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
-            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+            "category": "Projects",
+            "title": "AAA Project over NDA ",
+            "description": "A very popular game from a big studio, with millions of players worldwide (Over NDA contract).",
+            "Roles": [
+                "Engine Programmer"
+            ],
+            "about": "In this project, I worked extensively on the rendering pipeline using DirectX 11 and Metal, focusing on performance optimization, GPU efficiency, and overall rendering improvements.",
+            "image": "src/ProjectFiles/EA/NDA.webp",
+            "skills": [
+                "C++",
+                "DX9",
+                "DX11",
+                "Metal",
+                "PS4",
+                "Xbox",
+                "PC",
+                "MACoS",
+                "Perforce",
+                "AAA", 
+                "HLSL"
+            ],
+            "htmlpath": "Pages/EA.html"
         },
         {
-            "title": "Avalon 4",
-            "description": "MMO sandbox UE5",
-            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
-            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+            "category": "Projects",
+            "title": "Online pool Game",
+            "projectLink": "https://twingames.com.br/",
+            "description": "An online 2x2 multiplayer game developed for a web platform featuring multiple competitive mini-games.",
+            "Roles": [
+                "Gameplay Programmer"
+            ],
+            "about": "I independently built the full client-server architecture, with a Linux-based backend and a Unity WebGL client. I managed secure deployment over WSS and developed custom JavaScript bridges to integrate the website frontend with the Unity WebGL build, enabling real-time communication and data exchange between the page and the game.",
+            "image": "src/ProjectFiles/Pool/Pool.gif",
+            "skills": [
+                "C#",
+                "Unity",
+                "Multiplayer",
+                "Webgl",
+                "git",
+                "Physics"
+            ],
+            "htmlpath": "Pages/Pool.html"
         },
         {
-            "title": "Avalon 5",
-            "description": "MMO sandbox UE5",
-            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
-            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+            "category": "Projects",
+            "title": "Online Truco – A South American Trick-Taking Card Game",
+            "projectLink": "https://twingames.com.br/",
+            "description": "An online 2x2 multiplayer game developed for a web platform featuring multiple competitive mini-games.",
+            "Roles": [
+                "Gameplay Programmer"
+            ],
+            "about": "I independently built the full client-server architecture, with a Linux-based backend and a Unity WebGL client. I managed secure deployment over WSS and developed custom JavaScript bridges to integrate the website frontend with the Unity WebGL build, enabling real-time communication and data exchange between the page and the game.",
+            "image": "src/ProjectFiles/Truco/Truco.gif",
+            "skills": [
+                "C#",
+                "Unity",
+                "Multiplayer",
+                "Webgl",
+                "git"
+            ],
+            "htmlpath": "Pages/Truco.html"
         },
         {
-            "title": "Avalon 6",
-            "description": "MMO sandbox UE5",
-            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
-            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+            "category": "Projects",
+            "title": "Online Chess Game",
+            "projectLink": "https://twingames.com.br/",
+            "description": "An online 2x2 multiplayer game developed for a web platform featuring multiple competitive mini-games.",
+            "Roles": [
+                "Gameplay Programmer"
+            ],
+            "about": "I independently built the full client-server architecture, with a Linux-based backend and a Unity WebGL client. I managed secure deployment over WSS and developed custom JavaScript bridges to integrate the website frontend with the Unity WebGL build, enabling real-time communication and data exchange between the page and the game.",
+            "image": "src/ProjectFiles/Chess/Chess.gif",
+            "skills": [
+                "C#",
+                "Unity",
+                "Multiplayer",
+                "Webgl",
+                "git",
+                "Linux",
+                "JS"
+            ],
+            "htmlpath": "Pages/Chess.html"
         },
         {
-            "title": "Avalon 7",
-            "description": "MMO sandbox UE5",
-            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
-            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+            "category": "Projects",
+            "title": "Route Raiders",
+            "projectLink": "https://routeraiders.com.br/",
+            "description": "A location based game mobile, where player can find routes, treasures, collect items and complete challenges to get rewards in the real world",
+            "Roles": [
+                "Gameplay Programmer"
+            ],
+            "about": "Full-stack location-based adventure app built solo, featuring .NET Core backend, Angular CMS, Unity game with Mapbox, JWT login, real-time positioning, dynamic quests, collectibles, QR-based rewards, and automated DevOps deployment.",
+            "image": "src/ProjectFiles/RouteRaiders/RouteRaiders.gif",
+            "skills": [
+                "C#",
+                "Unity",
+                ".Net core",
+                "Android",
+                "IOS",
+                "git",
+                "Angular",
+                "JS",
+                "SQL",
+                "DevOps",
+                "Linux",
+                "TS",
+                "Postman",
+                "Location-Based", 
+                "Jenkins"
+            ],
+            "htmlpath": "Pages/RouteRaiders.html"
         },
         {
-            "title": "Avalon 8",
-            "description": "MMO sandbox UE5",
-            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
-            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+            "category": "Projects",
+            "title": "Builder Scenes",
+            "description": "Builder scenes is a tool that allows users to create and customize their own scenes using assets as materials, 3d models, light configuration, camera configurations, etc.",
+            "Roles": [
+                "Gameplay Programmer"
+            ],
+            "about": "Unity-based real-time scene builder developed for Creative Drive (now Accenture), enabling users to configure environments and generate photorealistic renders through a VRay-integrated pipeline.",
+            "image": "src/ProjectFiles/BuilderScenes/BuilderScenes.gif",
+            "skills": [
+                "C#",
+                "Unity"
+            ],
+            "htmlpath": "Pages/BuilderScenes.html"
         },
         {
-            "title": "Avalon 9",
-            "description": "MMO sandbox UE5",
-            "image": "src/ProjectFiles/Avalon/AvalonCombat.gif",
-            "skills": ["C++", "Unreal Engine", "Multiplayer"]
+            "category": "Projects",
+            "title": "WKSP Rumble Arena",
+            "projectLink": "https://store.steampowered.com/agecheck/app/1391250/",
+            "description": "Fighting game with more than 100 characters, where players can fight in different arenas, and icludes a story mode",            
+            "Roles": [
+                "Gameplay Programmer"
+            ],
+            "about": "Solo-developed 2D fighting game featuring over 100 unique characters, built with a scalable archetype system, automated asset pipeline, custom hitbox logic, AI state machines, and full gameplay flow implementation.",
+            "image": "src/ProjectFiles/WKSP/WKSP.gif",
+            "skills": [
+                "C#",
+                "Unity",
+                "Webgl",
+                ".Net core",
+                "Angular",
+                "JS",
+                "SQL",
+                "DevOps",
+                "TS",
+                "Postman"
+            ],
+            "htmlpath": "Pages/WKSP.html"
+        },
+        {
+            "category": "Projects",
+            "title": "The last of pawns",
+            "description": "Hypercasual game based on peg solitaire, where players have diferent layouts to solve.",
+            "Roles": [
+                "Gameplay Programmer"
+            ],
+            "about": "A hyper-casual puzzle game inspired by Peg Solitaire, developed independently in Unity (C#). Each level features a unique board layout, created using a custom editor tool built to streamline level design. The project includes fully animated gameplay and UI systems using Animation Curves and Coroutines, along with integrated Android ads and in-app purchases.",
+            "image": "src/ProjectFiles/TLOP/TLOP.gif",
+            "skills": [
+                "C#",
+                "Unity", 
+                "Android"
+            ],
+            "htmlpath": "Pages/TLOP.html"
+        },
+        {
+            "category": "Cases of study",
+            "title": "Space Invaders",
+            "description": "Case of study where I explore c++ and SFML and copy the classic Space Invaders game.",
+            "Roles": [],
+            "about": "This case study was created to explore and experiment with SFML using C++. The primary goal was to deepen my understanding of low-level game loop architecture, manual rendering pipelines, and custom physics implementation without relying on a full-featured game engine.",
+            "image": "src/ProjectFiles/SpaceInvaders/SpaceInvaders.gif",
+            "skills": [
+                "C++",
+                "SFML"
+            ], 
+            "htmlpath": "Pages/SpaceInvaders.html",
+            "GithubLink": "https://github.com/alandlb92/Space_Invaders"
+        },
+        {
+            "category": "Cases of study",
+            "title": "Root Engine",
+            "description": "Case of study where I explore engine programming and create a simple engine with c++ DX11.",
+            "Roles": [],
+            "about": "The purpose of this study was to design and build a modular real-time 3D engine (RootEngine) in C++ using DirectX 11, focusing on understanding low-level rendering,asset pipelines, animation systems, input abstraction, and editor architecture.",
+            "image": "src/ProjectFiles/RootEngine/RootEngine.gif",
+            "skills": [
+                "C++",
+                "DX11", 
+                "HLSL"
+            ],
+            "htmlpath": "Pages/RootEngine.html",
+            "GithubLink": "https://github.com/alandlb92/RootEngine"
+        },
+        {
+            "category": "Cases of study",
+            "title": "Pong console online",
+            "description": "Case of study where I boost library and create a simple pong game rendered as text in command prompt, with online multiplayer.",
+            "Roles": [],
+            "about": " The goal of this study was to deeply understand WebSocket communication, real-time message exchange, and low-level network architecture using C++. Instead of relying on game engines or networking frameworks, the objective was to manually implement the full client-server communication pipeline.",
+            "image": "src/ProjectFiles/PongConsoleOnline/PongConsoleOnline.gif",
+            "skills": [
+                "C++",
+                "Boost",
+                "Asio",
+                "Multiplayer"
+            ], 
+            "htmlpath": "Pages/PongConsoleOnline.html",
+            "GithubLink": "https://github.com/alandlb92/Pong_Console_Online"
+        },
+        {
+            "category": "Cases of study",
+            "title": "AutoBattle Console",
+            "description": "Case of study where I boost library and create a simple auto battle game rendered as text in command prompt.",
+            "Roles": [],
+            "about": "This project was developed as a technical challenge to explore design patterns, clean architecture, and core turn-based combat systems using modern C++. The focus was on refactoring and extending the initial implementation, applying the Command Pattern to decouple behavior logic from character data, and improving modularity, readability, and extensibility of the combat simulation.",
+            "image": "src/ProjectFiles/AutoBattle/AutoBattle.gif",
+            "skills": [
+                "C++"
+            ],
+            "htmlpath": "Pages/AutoBattle.html",
+            "GithubLink": "https://github.com/alandlb92/AutoBattle"
+        }
+    ],
+    "WorkExperiences": [
+        {
+            "title": "Gameplay Engineer",
+            "company": "Avalon (MMO / UGC Platform)",
+            "period": "Sep 2025 – Feb 2026",
+            "description": "Worked on an MMO with User Generated Content (UGC) features using Unreal Engine (C++ and Blueprints). Implemented gameplay systems including AI behavior trees, UI features and multiplayer RPC communication. Developed systems and tools supporting persistent data and world-building workflows for player-created content."
+        },
+        {
+            "title": "Gameplay Engineer",
+            "company": "Hype Joe (Online Multiplayer)",
+            "period": "Apr 2025 – Sep 2025",
+            "description": "Worked on a multiplayer title using Unreal Engine (C++), contributing to gameplay systems development. Refactored the attribute system to integrate with Unreal Gameplay Ability System (GAS). Designed and implemented a skills system and progression-based skill tree."
+        },
+        {
+            "title": "Gameplay Engineer",
+            "company": "Kokku (AA / AAA Project – NDA)",
+            "period": "June 2023 – Apr 2025",
+            "description": "Worked on an AA title (Unity, C#) and later on a globally recognized AAA franchise (C++, DX11, Metal, PS4) under NDA, focusing on rendering systems and engine performance optimization. Collaborated with cross-platform teams to improve performance and rendering pipelines across PC and consoles."
+        },
+        {
+            "title": "Gameplay Engineer",
+            "company": "Creative Drive by Accenture Interactive",
+            "period": "June 2020 – June 2023",
+            "description": "Worked as C#/Unity programmer implementing new features and bug fixes in company proprietary software, used to create CGI scenes to be rendered in Vray"
+        },
+        {
+            "title": "Gameplay Engineer",
+            "company": "Nukearts",
+            "period": "May 2018 - May 2020",
+            "description": "Worked C# Unity, C++ and Unreal, .NET core MVC, Angular and TypeScript."
         }
     ]
 }

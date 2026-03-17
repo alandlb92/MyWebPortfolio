@@ -1,0 +1,91 @@
+<h2>Rendering & Engine Optimization</h2>
+
+<p>
+    This project was already highly optimized, but as part of a large-scale production
+    with a massive player base, further performance improvements and engine modernization
+    were required.
+</p>
+
+<p>
+    I worked primarily on rendering systems across
+    <strong>DirectX 11, PlayStation 4, and Metal</strong>, contributing to
+    performance optimization and engine-level improvements.
+</p>
+
+<h3>GPU Benchmark System</h3>
+
+<p>
+    I helped design and implement a <strong>runtime GPU benchmarking system</strong>.
+    The game supported a wide range of graphics cards, and recommended settings
+    were based on a predefined hardware list. However, many players used
+    unsupported GPUs, leading to inaccurate configuration recommendations.
+</p>
+
+<p>
+    To address this, we developed a dedicated C++ benchmark project to evaluate
+    GPU performance dynamically.
+</p>
+
+<ul>
+    <li>Created a standalone C++ benchmark module for GPU testing.</li>
+    <li>Developed three stress-test shaders:
+        <ul>
+            <li><strong>Vertex Shader</strong></li>
+            <li><strong>Pixel Shader</strong></li>
+            <li><strong>Compute Shader</strong></li>
+        </ul>
+    </li>
+    <li>Designed shaders to execute heavy GPU workloads.</li>
+    <li>Measured execution time using <strong>GPU events</strong> to evaluate hardware performance.</li>
+</ul>
+
+<p>
+    The benchmark results were used to provide more accurate graphics presets
+    for previously unsupported GPUs.
+</p>
+
+<h3>DX9 to DX11 Modernization</h3>
+
+<p>
+    The game was originally built using <strong>DirectX 9</strong>, as it had
+    more than 10 years of development history. Although a DX11 path existed
+    (mainly for the Xbox One version), several legacy DX9 patterns were still in use.
+</p>
+
+<p>
+    One key modernization effort involved migrating shader parameter handling
+    to proper <strong>Constant Buffers</strong>, replacing the older DX9-style
+    individual parameter passing approach.
+</p>
+
+<ul>
+    <li>Analyzed and refactored legacy shaders.</li>
+    <li>Identified and grouped data into appropriate constant buffers.</li>
+    <li>Migrated parameter-based inputs to structured DX11 constant buffers.</li>
+    <li>Ensured compatibility across DirectX 11, PlayStation 4, and Metal.</li>
+</ul>
+
+<p>
+    This modernization improved maintainability, performance consistency,
+    and cross-platform scalability.
+</p>
+
+<h3>Shader Compiler Improvements</h3>
+
+<p>
+    I contributed to improvements in the engine’s <strong>shader compiler pipeline</strong>,
+    particularly regarding shader variant management and precompiled shader packages.
+</p>
+
+<ul>
+    <li>Adapted the compiler to store constant data more efficiently.</li>
+    <li>Implemented and refined shader variant hashing logic.</li>
+    <li>Investigated and resolved duplicated shader variant generation.</li>
+</ul>
+
+<p>
+    After extensive debugging, I discovered an inconsistency in the shader
+    variant hash generation logic. Fixing this issue eliminated duplicated
+    variants, reduced the size of the precompiled shader package by several
+    megabytes, and improved initial loading times.
+</p>

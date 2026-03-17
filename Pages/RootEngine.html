@@ -1,0 +1,171 @@
+<h2>Engine Overview – RootEngine</h2>
+<p>
+    RootEngine is a custom C++ real-time rendering engine built on top of DirectX 11.
+    The architecture is modular and divided into core systems:
+</p>
+
+<ul>
+    <li>Rendering System (DX11 + HLSL)</li>
+    <li>Scene & Entity Structure</li>
+    <li>Mesh & SkeletalMesh Components</li>
+    <li>Animation System</li>
+    <li>Asset Conversion Pipeline</li>
+    <li>Input Subsystem (FaiaInputSystem)</li>
+    <li>Basic Editor (Viewport + Hierarchy)</li>
+</ul>
+
+<hr>
+
+<h2>Rendering System (DirectX 11)</h2>
+<p>
+    The rendering layer was implemented directly using DirectX 11.
+    The engine initializes device, swap chain, render target views,
+    depth buffers, and manages the full rendering pipeline.
+</p>
+
+<ul>
+    <li>Custom HLSL Vertex and Pixel shaders</li>
+    <li>Manual constant buffer management</li>
+    <li>Simple textured mesh rendering</li>
+    <li>Global lighting implementation</li>
+    <li>Frame update and render separation</li>
+</ul>
+
+<p>
+    Models are rendered using a structured draw pipeline, binding vertex buffers,
+    index buffers, shaders, textures, and constant buffers explicitly.
+</p>
+
+<hr>
+
+<h2>Mesh & Skeletal Architecture</h2>
+<p>
+    The engine supports both static and skeletal meshes through a component-based design:
+</p>
+
+<ul>
+    <li><strong>MeshComponent</strong> static geometry</li>
+    <li><strong>SkeletalMeshComponent</strong> skinned meshes with bone data</li>
+</ul>
+
+<p>
+    Skeletal meshes include:
+</p>
+
+<ul>
+    <li>Bone hierarchy</li>
+    <li>Skinning weights</li>
+    <li>Bone transformation matrices sent to GPU</li>
+    <li>Animation playback system</li>
+</ul>
+
+<p>
+    Skinning is performed in the vertex shader using bone matrices updated per frame.
+</p>
+
+<hr>
+
+<h2>Asset Pipeline & Tooling</h2>
+<p>
+    A full asset conversion workflow was implemented to avoid runtime parsing overhead.
+</p>
+
+<ul>
+    <li>FBX conversion using Assimp (C++)</li>
+    <li>Conversion to custom Mesh, SkinMesh and BoneInfo formats</li>
+    <li>PNG processing using LibPNG</li>
+    <li>JPEG processing using LibJPEG-Turbo</li>
+    <li>JSON serialization/deserialization via Nlohmann JSON</li>
+</ul>
+
+<p>
+    This pipeline allows preprocessing models and textures into optimized
+    engine-native formats before runtime.
+</p>
+
+<hr>
+
+<h2>Input System – FaiaInputSystem</h2>
+<p>
+    A dedicated input module was implemented to abstract Win32 Raw Input
+    and provide engine-level bindings.
+</p>
+
+<ul>
+    <li>Raw Input registration (RegisterRawInputDevices)</li>
+    <li>Keyboard & mouse event translation</li>
+    <li>Resolution-normalized mouse axes</li>
+    <li>Event queue processing</li>
+    <li>Conditional bindings (modifier support)</li>
+    <li>Callback-based action and axis events</li>
+</ul>
+
+<p>
+    The system processes OS messages separately from the engine update loop,
+    ensuring deterministic behavior and separation of concerns.
+</p>
+
+<hr>
+
+<h2>Scene & Data Structure (imgui)</h2>
+<p>
+    The scene architecture defines entities composed of components.
+    Internal structures support:
+</p>
+
+<ul>
+    <li>Transform hierarchy</li>
+    <li>Mesh attachment</li>
+    <li>Skeletal data binding</li>
+    <li>Render submission per frame</li>
+</ul>
+
+<p>
+    The scene graph structure is mirrored inside the editor hierarchy.
+</p>
+
+<hr>
+
+<h2>Editor Layer</h2>
+<p>
+    A minimal editor layer was implemented on top of the engine runtime.
+    It includes:
+</p>
+
+<ul>
+    <li>Viewport rendering inside the editor</li>
+    <li>Hierarchy panel</li>
+    <li>Basic scene inspection</li>
+</ul>
+
+<p>
+    The editor interacts directly with engine subsystems,
+    sharing scene data structures.
+</p>
+
+<hr>
+
+<h2>Core Engineering Achievements</h2>
+<ul>
+    <li>Custom DirectX 11 rendering pipeline</li>
+    <li>GPU skeletal animation implementation</li>
+    <li>Custom asset conversion tools</li>
+    <li>Native Win32 input abstraction</li>
+    <li>Scene graph architecture</li>
+    <li>Engine/editor integration</li>
+</ul>
+
+<hr>
+
+<h2>Conclusion</h2>
+<p>
+    RootEngine represents a full-stack real-time rendering study,
+    covering rendering, animation, asset processing, input abstraction,
+    and tooling integration.
+</p>
+
+<p>
+    By implementing these systems from scratch, this project provided
+    practical experience in low-level engine architecture, graphics programming,
+    and modular subsystem design.
+</p>

@@ -1,0 +1,35 @@
+
+<h2>Online Chess Game</h2>
+
+<h3>Project Foundation</h3>
+<p>
+    This project was based on an open-source Unity chess implementation.
+    My work focused on improving multiplayer functionality, synchronization,
+    and overall game reliability, especially for WebGL deployment.
+</p>
+
+<h3>Turn System & Game Logic</h3>
+<ul>
+    <li>Implemented full turn synchronization between clients.</li>
+    <li>Ensured consistent board state replication.</li>
+    <li>Developed a system to display captured pieces on the side of the board.</li>
+    <li>Implemented match timers to determine victory and defeat conditions.</li>
+</ul>
+
+<h3>Online Integration & Networking</h3>
+<p>
+    Although the original project already included an online multiplayer system,
+    it relied on Unity’s legacy networking solution, which presented stability
+    issues, especially for WebGL builds.
+</p>
+
+<p>
+    I migrated the project to <strong>Unity Netcode</strong>, refactoring
+    networking logic to properly replicate chess pieces and synchronize game state
+    across clients in a reliable and scalable way.
+</p>
+
+<p>
+    This migration significantly improved multiplayer stability, particularly
+    for browser-based WebGL gameplay.
+</p>
