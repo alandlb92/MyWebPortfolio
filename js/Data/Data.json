@@ -273,31 +273,31 @@
             "title": "Gameplay Engineer",
             "company": "Avalon (MMO / UGC Platform)",
             "period": "Sep 2025 – Feb 2026",
-            "description": "Worked on an MMO with User Generated Content (UGC) features using Unreal Engine (C++ and Blueprints). Implemented gameplay systems including AI behavior trees, UI features and multiplayer RPC communication. Developed systems and tools supporting persistent data and world-building workflows for player-created content."
+            "description": "Worked on an MMO-scale platform with user-generated content features using Unreal Engine (C++ and Blueprints). Designed and implemented gameplay systems supporting persistent player-created worlds and interactive content workflows. Developed AI behavior tree logic and gameplay UI systems integrated with multiplayer RPC communication.Contributed to tools and runtime systems enabling scalable world-building pipelines for creators."
         },
         {
             "title": "Gameplay Engineer",
             "company": "Hype Joe (Online Multiplayer)",
             "period": "Apr 2025 – Sep 2025",
-            "description": "Worked on a multiplayer title using Unreal Engine (C++), contributing to gameplay systems development. Refactored the attribute system to integrate with Unreal Gameplay Ability System (GAS). Designed and implemented a skills system and progression-based skill tree."
+            "description": "Contributed to gameplay systems development for an online multiplayer title using Unreal Engine (C++). Refactored the gameplay attribute architecture to integrate with Unreal Gameplay Ability System (GAS). Designed and implemented a progression-based skill tree framework supporting extensible player abilities."
         },
         {
             "title": "Gameplay Engineer",
             "company": "Kokku (AA / AAA Project – NDA)",
             "period": "June 2023 – Apr 2025",
-            "description": "Worked on an AA title (Unity, C#) and later on a globally recognized AAA franchise (C++, DX11, Metal, PS4) under NDA, focusing on rendering systems and engine performance optimization. Collaborated with cross-platform teams to improve performance and rendering pipelines across PC and consoles."
+            "description": "Worked on an AA title using Unity (C#) developing gameplay systems and runtime features. Later contributed to global recognized franchise working in C++ across DirectX 11, Metal and console platforms. Supported rendering runtime systems and cross-platform performance improvements across PC and consoles. Collaborated with engine and platform teams to optimize performance-sensitive gameplay and rendering workflows. "
         },
         {
             "title": "Gameplay Engineer",
             "company": "Creative Drive by Accenture Interactive",
             "period": "June 2020 – June 2023",
-            "description": "Worked as C#/Unity programmer implementing new features and bug fixes in company proprietary software, used to create CGI scenes to be rendered in Vray"
+            "description": "Developed runtime features and tooling improvements in a proprietary Unity-based production platform used to build CGI production scenes rendered in V-Ray. Implemented runtime improvements and workflow optimizations supporting large-scale content production pipelines."
         },
         {
             "title": "Gameplay Engineer",
             "company": "Nukearts",
             "period": "May 2018 - May 2020",
-            "description": "Worked C# Unity, C++ and Unreal, .NET core MVC, Angular and TypeScript."
+            "description": "Developed gameplay systems and R&D prototypes using Unity and Unreal Engine across multiple projects. Implemented core gameplay features for a fighting game released on Steam. Contributed to AR educational applications integrating interactive gameplay mechanics. Acted as a technical reference for artists and animators, supporting asset integration workflows and pipeline decisions."
         }
     ]
 }
