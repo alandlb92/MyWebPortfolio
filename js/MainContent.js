@@ -1,5 +1,24 @@
 var data;
 
+function getSlug(project) {
+    if (project.htmlpath) return project.htmlpath.split('/').pop().replace('.html', '').toLowerCase();
+    return project.title.toLowerCase().replace(/\s+/g, '-');
+}
+
+window.addEventListener("popstate", () => {
+    const hash = location.hash.slice(1).toLowerCase();
+    if (!hash) {
+        OnCloseProjectDetails();
+        return;
+    }
+    if (!data) return;
+    const matchIndex = data.Projects.findIndex(p => p.slug === hash);
+    if (matchIndex !== -1) {
+        const skills = data.Projects[matchIndex].skills.map(s => `<span class="projectSkill">${s}</span>`).join("");
+        OnClickProjectCard(matchIndex, skills);
+    }
+});
+
 export async function OnStart() {
     backButton.addEventListener("click", OnCloseProjectDetails);
 
@@ -51,6 +70,7 @@ export async function OnStart() {
         cardElement.addEventListener("click", () => {
             OnClickProjectCard(index, skills);
         });
+        data.Projects[index].slug = getSlug(element);
         const githubElement = cardElement.querySelector("#github-available");
         if (element.GithubLink != undefined && element.GithubLink != "") {
             githubElement.style.display = "block";
@@ -65,6 +85,15 @@ export async function OnStart() {
 
     CreateFilters(AllSkills);
     AddWorkExperiences();
+
+    const hash = location.hash.slice(1).toLowerCase();
+    if (hash) {
+        const matchIndex = data.Projects.findIndex(p => p.slug === hash);
+        if (matchIndex !== -1) {
+            const skills = data.Projects[matchIndex].skills.map(s => `<span class="projectSkill">${s}</span>`).join("");
+            OnClickProjectCard(matchIndex, skills);
+        }
+    }
 }
 
 async function AddWorkExperiences() {
@@ -111,6 +140,7 @@ async function OnClickProjectCard(projectIndex, skills) {
         ProjectGithub.style.display = "none";
     }
 
+    history.pushState(null, "", "#" + data.Projects[projectIndex].slug);
     lastScrollY = window.scrollY;
     content.style.transform = `translateY(${-lastScrollY}px)`;
     window.scrollTo(0, 0);
@@ -130,6 +160,7 @@ async function OnClickProjectCard(projectIndex, skills) {
 }
 
 function OnCloseProjectDetails() {
+    history.pushState(null, "", location.pathname);
     contentWrapper.style.transform = "translateX(-50%)";
     contentWrapper.style.height = "auto";
     content.style.transform = `translateY(${0}px)`;
