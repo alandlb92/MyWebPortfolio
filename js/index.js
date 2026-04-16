@@ -5,6 +5,16 @@ function adjustContentMargin() {
     contentWrapper.style.marginTop = h + "px";
 }
 
+function setupMenuToggle() {
+    const toggle = document.getElementById("menuToggle");
+    const rightHeader = document.querySelector(".right-header");
+    toggle.addEventListener("click", () => {
+        toggle.classList.toggle("open");
+        rightHeader.classList.toggle("open");
+        adjustContentMargin();
+    });
+}
+
 async function OnStartMainPage() {
     console.log("Main page loaded");
     const module = await import("./MainContent.js");
@@ -18,6 +28,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         const html = await response.text();
         content.innerHTML = html;
         adjustContentMargin();
+        setupMenuToggle();
         window.addEventListener("resize", adjustContentMargin);
         OnStartMainPage();
     } catch (error) {
