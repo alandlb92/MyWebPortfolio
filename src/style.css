@@ -34,20 +34,35 @@ header {
 }
 
 @media (max-width: 768px) {
-        header {    
-        height: 100px;
+    header {
+        height: auto;
+        padding-bottom: 10px;
     }
-    .nav {    
-        margin: 20px;
-        margin-top: 20px;
+    .nav {
+        flex-direction: column;
+        gap: 6px;
+        margin: 10px 15px;
+    }
+    .left-header {
+        width: 100%;
+    }
+    .right-header {
+        width: 100%;
+    }
+    .header-buttons {
+        justify-content: flex-start;
+    }
+    .right-header-mail {
+        text-align: left;
+        font-size: 12px;
     }
 }
 
 .left-header {
     flex: 1;
-    color: var(--secondary-text-color);    
+    min-width: 0;
+    color: var(--secondary-text-color);
     filter: saturate(50%);
-    width: 50%;
 }
 .viewport {
     width: 100%;
@@ -189,10 +204,8 @@ header {
         margin-left: 3px;
     }
 
-    .right-header-mail {
-        font-size: 10px;
-    }
 }
+
 
 .profile {
     display: inline-flex;
